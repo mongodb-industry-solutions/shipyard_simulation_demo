@@ -1,0 +1,27 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3008",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@leafygreen-ui/button": "^24.0.0",
+    "@leafygreen-ui/card": "^13.0.0",
+    "@leafygreen-ui/modal": "^18.0.0",
+    "@leafygreen-ui/select": "^15.0.0",
+    "@leafygreen-ui/table": "^14.0.0",
+    "@leafygreen-ui/tabs": "^15.0.0",
+    "@leafygreen-ui/text-input": "^15.0.0",
+    "@leafygreen-ui/tooltip": "^14.0.0",
+    "@leafygreen-ui/typography": "^21.0.0",
+    "axios": "^1.9.0",
+    "next": "15.3.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "recharts": "^2.15.3"
+  }
+}
