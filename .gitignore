@@ -57,3 +57,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+#Deployment
+Makefile
+policy.json
+task-def.json

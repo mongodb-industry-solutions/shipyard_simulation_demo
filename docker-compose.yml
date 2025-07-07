@@ -13,7 +13,11 @@ services:
       context: .
       no_cache: true
       dockerfile: Dockerfile.frontend
+      args:
+        BACKEND_HOST: backend
     ports:
       - "3008:3008"
+    environment:
+      - BACKEND_HOST=backend
     restart: always
     container_name: shipyard-digital-twin-frontend
