@@ -5,6 +5,7 @@
 This project is an interactive simulation and analytics dashboard that demonstrates how **game theory** can be applied to industrial safety scenarios, specifically in a shipyard environment. It uses **MongoDB** for flexible, real-time data storage, **FastAPI** for backend simulation logic, and a modern **React** (Next.js) frontend with LeafyGreen UI and Recharts for visualization.
 
 **Key Features:**
+
 - Simulate worker behavior under different supervisor policies and incentive levels.
 - Generate synthetic worker profiles and environmental sensor data.
 - Visualize worker decisions and risk profiles with interactive charts and tables.
@@ -36,42 +37,68 @@ git clone <your-repo-url>
 cd shipyard_simulation_demo
 ```
 
-### 2. Set Up the Backend
+### 2. Configure Environment Variables
+
+Create a `.env` file in the `backend/` directory and set your MongoDB connection string:
+
+```bash
+echo "MONGO_URI=mongodb://localhost:27017/shipyard_demo" > backend/.env
+```
+
+> **Note:** Replace the connection string with your MongoDB Atlas URI if using a cloud database.
+
+### 3. Choose Your Setup Method
+
+You can set up the project using either Docker Compose (quick setup) or manual installation.
+
+#### Option A: Quick Setup with Docker Compose
+
+This is the fastest way to get everything running:
+
+```bash
+docker-compose up --build -d
+```
+
+That's it! The application will be available at [http://localhost:3008](http://localhost:3008).
+
+#### Option B: Manual Setup
+
+If you prefer to run components individually:
+
+**Set Up the Backend:**
 
 1. Navigate to the backend directory
 2. Install dependencies:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 3. Start the FastAPI server (default port: `8008`):
 
-    ```bash
-    uvicorn main:app --reload --port 8008
-    ```
+   ```bash
+   uvicorn main:app --reload --port 8008
+   ```
 
-4. Ensure MongoDB is running and accessible by the backend. Add the connection string to the .env file in the backend folder
-
-### 3. Set Up the Frontend
+**Set Up the Frontend:**
 
 1. Navigate to the frontend directory:
 
-    ```bash
-    cd frontend
-    ```
+   ```bash
+   cd frontend
+   ```
 
 2. Install dependencies:
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. Start the development server:
 
-    ```bash
-    npm run dev
-    ```
+   ```bash
+   npm run dev
+   ```
 
 4. Open [http://localhost:3008](http://localhost:3008) in your browser.
 
@@ -88,7 +115,8 @@ cd shipyard_simulation_demo
 3. **Run Simulation:**  
    Click "Run Simulation" to simulate worker decisions and safety events.
 
-4. **View Results:**  
+4. **View Results:**
+
    - Worker behavior and sensor data are shown in tables.
    - Charts visualize worker decisions and risk profiles.
    - Click "Data Model" to inspect sample MongoDB documents.
@@ -109,7 +137,6 @@ cd shipyard_simulation_demo
 - **Flexible Data Model:** Store varied data (workers, behaviors, sensors) using the flexible document model.
 - **Real-Time Analytics:** Aggregation pipelines and change streams enable real time analytics and responsive dashboards.
 - **Scalability:** Easily handles large volumes of simulation and sensor data.
-
 
 ---
 
