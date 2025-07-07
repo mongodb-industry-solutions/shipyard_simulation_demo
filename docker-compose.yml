@@ -1,0 +1,19 @@
+services:
+  backend:
+    build:
+      context: .
+      no_cache: true
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8008:8008"
+    restart: always
+    container_name: shipyard-digital-twin-backend
+  frontend:
+    build:
+      context: .
+      no_cache: true
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3008:3008"
+    restart: always
+    container_name: shipyard-digital-twin-frontend
