@@ -142,7 +142,7 @@ If you prefer to run components individually:
 
 ## Author
 
-Humza Akhtar <humza.akhtar@mongodb.com>
+Humza Akhtar, MongoDB <humza.akhtar@mongodb.com>
 
 ---
 
