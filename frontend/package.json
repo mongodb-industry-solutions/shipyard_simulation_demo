@@ -19,7 +19,7 @@
     "@leafygreen-ui/tooltip": "^13.0.13",
     "@leafygreen-ui/typography": "^20.1.9",
     "axios": "^1.10.0",
-    "next": "15.3.5",
+    "next": "15.4.8",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "recharts": "^3.0.2"
