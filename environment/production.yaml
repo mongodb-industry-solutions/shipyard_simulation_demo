@@ -1,6 +1,6 @@
 env:
   # Backend API URL for frontend to connect to backend health check
-  BACKEND_URL: http://localhost:8000
+  BACKEND_URL: http://localhost:8008
 
 ## Single Pod Containers
 envSecrets:
