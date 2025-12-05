@@ -13,7 +13,7 @@ envSecrets:
 ## should be used in case of multiple sidecar containers
 sidecarContainers:
   - name: backend
-    image: 275662791714.dkr.ecr.us-east-1.amazonaws.com/kanopy-session-backend:latest
+    image: 275662791714.dkr.ecr.us-east-1.amazonaws.com/shipyard-simulation-demo-backend:latest
     env:
       # MongoDB connection (from Kubernetes secret)
       - name: MONGODB_URI
