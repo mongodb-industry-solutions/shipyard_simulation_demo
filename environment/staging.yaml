@@ -1,11 +1,12 @@
 env:
+  NODE_ENV: staging
   # Backend API URL for frontend to connect to backend health check - get <service-name> using kubectl get services
   BACKEND_HOST: http://localhost:8008
 
 ## Single Pod Containers
 envSecrets:
   # MongoDB Configuration
-  MONGODB_URI: shipyard-digital-twin
+  MONGO_URI: shipyard-digital-twin
 
 ## should be used in case of multiple sidecar containers
 sidecarContainers:
@@ -13,11 +14,11 @@ sidecarContainers:
     image: 275662791714.dkr.ecr.us-east-1.amazonaws.com/shipyard-simulation-demo-backend:latest
     env:
       # MongoDB connection (from Kubernetes secret)
-      - name: MONGODB_URI
+      - name: MONGO_URI
         valueFrom:
           secretKeyRef:
             name: shipyard-digital-twin
-            key: MONGODB_URI
+            key: MONGO_URI
 
 ## ----------------------------- Cloud Specific Configurations -----------------------------
 
