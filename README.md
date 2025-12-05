@@ -42,7 +42,7 @@ cd shipyard_simulation_demo
 Create a `.env` file in the `backend/` directory and set your MongoDB connection string:
 
 ```bash
-echo "MONGO_URI=mongodb://localhost:27017/shipyard_demo" > backend/.env
+echo "MONGODB_URI=mongodb://localhost:27017/shipyard_demo" > backend/.env
 ```
 
 > **Note:** Replace the connection string with your MongoDB Atlas URI if using a cloud database.

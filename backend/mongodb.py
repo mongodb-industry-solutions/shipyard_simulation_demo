@@ -8,8 +8,8 @@ import random
 import uuid
 
 load_dotenv()
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-client = MongoClient(MONGO_URI)
+MONGODB_URI = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
+client = MongoClient(MONGODB_URI)
 db = client["shipyard"]
 
 # Time series coll
