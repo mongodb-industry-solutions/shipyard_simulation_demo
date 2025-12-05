@@ -6,19 +6,19 @@ env:
 ## Single Pod Containers
 envSecrets:
   # MongoDB Configuration
-  MONGO_URI: shipyard-digital-twin
+  MONGODB_URI: shipyard-digital-twin
 
 ## should be used in case of multi-pod container i.e: both frontend and backend in one pod
 sidecarContainers:
   - name: backend
-    image: 275662791714.dkr.ecr.us-east-1.amazonaws.com/shipyard-simulation-demo-backend:latest
+    image: 795250896452.dkr.ecr.us-east-1.amazonaws.com/industrysolutions/shipyard-simulation-demo-backend:latest
     env:
       # MongoDB connection (from Kubernetes secret)
-      - name: MONGO_URI
+      - name: MONGODB_URI
         valueFrom:
           secretKeyRef:
             name: shipyard-digital-twin
-            key: MONGO_URI
+            key: MONGODB_URI
 
 ## ----------------------------- Cloud Specific Configurations (For AWS only line 42 to 46 needed)-----------------------------
 
