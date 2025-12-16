@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3008",
+    "dev": "next dev -p 8080",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 8080",
     "lint": "next lint"
   },
   "dependencies": {
@@ -19,7 +19,7 @@
     "@leafygreen-ui/tooltip": "^13.0.13",
     "@leafygreen-ui/typography": "^20.1.9",
     "axios": "^1.12.0",
-    "next": "15.4.8",
+    "next": "15.4.10",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "recharts": "^3.0.2"

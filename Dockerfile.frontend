@@ -1,4 +1,4 @@
-FROM node:22.14.0-alpine AS base 
+FROM node:24-alpine AS base 
 
 FROM base AS deps
 RUN apk add --no-cache libc6-compat
@@ -36,8 +36,8 @@ COPY --from=builder /app/package.json ./package.json
 
 USER nextjs
 
-EXPOSE 3008
+EXPOSE 8080
 
-ENV PORT=3008
+ENV PORT=8080
 
 CMD ["npm", "start"]
